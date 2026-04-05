@@ -4,7 +4,7 @@ from __future__ import annotations
 from collections.abc import Mapping, Callable
 from typing import Any
 from homeassistant.components.automation import DOMAIN as AUTOMATION_DOMAIN
-from homeassistant.components.camera import DOMAIN as CAMERA_DOMAIN, STATE_IDLE
+from homeassistant.components.camera import DOMAIN as CAMERA_DOMAIN
 from homeassistant.components.group import DOMAIN as GROUP_DOMAIN
 from homeassistant.components.humidifier import DOMAIN as HUMIDIFIER_DOMAIN
 from homeassistant.components.input_boolean import DOMAIN as INPUT_BOOLEAN_DOMAIN
@@ -29,10 +29,11 @@ from homeassistant.const import (
     SERVICE_TURN_ON,
     SERVICE_UNLOCK,
     SERVICE_LOCK,
-    STATE_LOCKED,
     STATE_ON,
     STATE_PLAYING,
 )
+STATE_IDLE = "idle"
+STATE_LOCKED = "locked"
 from homeassistant.core import DOMAIN as HOMEASSISTANT_DOMAIN
 from homeassistant.util.read_only_dict import ReadOnlyDict
 from .const import MSG_OFF, MSG_ON, TopicSuffix
